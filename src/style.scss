@@ -1,5 +1,7 @@
-$body-color: purple;
+@import "~/node_modules/@fontsource/leckerli-one/400.css";
+@import "~/node_modules/@fontsource/roboto/400.css";
+@import "~/node_modules/@fontsource/open-sans/400.css";
 
-body {
-  color: $body-color;
+h1 {
+  font-family: 'Leckerli One';
 }

@@ -28,5 +28,10 @@
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@fontsource/leckerli-one": "^4.3.0",
+    "@fontsource/open-sans": "^4.3.0",
+    "@fontsource/roboto": "^4.3.0"
   }
 }
