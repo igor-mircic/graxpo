@@ -2,7 +2,7 @@
   "name": "graxpo",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://gitlab.com/igor-mircic/graxpo/issues"
   },
-  "homepage": "https://gitlab.com/igor-mircic/graxpo#readme"
+  "homepage": "https://gitlab.com/igor-mircic/graxpo#readme",
+  "devDependencies": {
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
 }
