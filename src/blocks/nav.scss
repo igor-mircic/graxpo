@@ -1,0 +1,61 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+
+@mixin link-color($link: red, $hover: hotpink, $active: blue) {
+  &:link {
+    color: $link;
+  }
+  &:visited {
+    color: $link;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
+
+%link-reset {
+  text-decoration: none;
+}
+
+%list-reset {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  &__logo {
+    @extend %link-reset;
+
+    font: {
+      family: t.$ff-logo;
+      size: t.$fs-h2;
+    }
+    @include link-color(
+      $link: c.$secondary-300,
+      $hover: c.$secondary-400,
+      $active: c.$secondary-300
+    );
+  }
+  &__list {
+    @extend %list-reset;
+  }
+  &__item {
+  }
+  &__link {
+    @extend %link-reset;
+
+    font: {
+      family: t.$ff-secondary;
+      size: t.$fs-h2;
+    }
+    @include link-color(
+      $link: c.$primary-400,
+      $hover: c.$secondary-300,
+      $active: c.$secondary-400
+    );
+  }
+}
