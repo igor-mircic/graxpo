@@ -35,15 +35,15 @@
       size: t.$fs-h2;
     }
     @include link-color(
-      $link: c.$secondary-300,
-      $hover: c.$secondary-400,
-      $active: c.$secondary-300
+      $link: c.$red-300,
+      $hover: c.$red-400,
+      $active: c.$red-300
     );
   }
   &__list {
     @extend %list-reset;
 
-    background: c.$primary-50;
+    background: c.$gray-50;
     padding: 3em 0;
 
     position: fixed;
@@ -69,9 +69,9 @@
       size: t.$fs-h2;
     }
     @include link-color(
-      $link: c.$primary-400,
-      $hover: c.$secondary-300,
-      $active: c.$secondary-400
+      $link: c.$gray-400,
+      $hover: c.$red-300,
+      $active: c.$red-400
     );
   }
   &__toggle {
@@ -87,7 +87,7 @@
   &__hamburger,
   &__hamburger::before,
   &__hamburger::after {
-    background: c.$primary-400;
+    background: c.$gray-400;
     width: 2em;
     height: 3px;
     border-radius: 1em;
