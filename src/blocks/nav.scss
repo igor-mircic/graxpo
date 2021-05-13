@@ -42,8 +42,24 @@
   }
   &__list {
     @extend %list-reset;
-  }
-  &__item {
+
+    background: c.$primary-50;
+    padding: 3em 0;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
   }
   &__link {
     @extend %link-reset;
@@ -57,5 +73,62 @@
       $hover: c.$secondary-300,
       $active: c.$secondary-400
     );
+  }
+  &__toggle {
+    padding: 0.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    z-index: 1000;
+  }
+  &__hamburger,
+  &__hamburger::before,
+  &__hamburger::after {
+    background: c.$primary-400;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+  }
+  &__hamburger::before,
+  &__hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &__hamburger {
+    display: block;
+    position: relative;
+    &::before {
+      top: 6px;
+    }
+    &::after {
+      bottom: 6px;
+    }
+  }
+  &__open {
+    .nav__list {
+      transform: translateX(0);
+    }
+
+    .nav__toggle {
+      position: fixed;
+    }
+
+    .nav__hamburger {
+      transform: rotate(0.625turn);
+    }
+
+    .nav__hamburger::before {
+      transform: rotate(90deg) translateX(-6px);
+    }
+
+    .nav__hamburger::after {
+      opacity: 0;
+    }
   }
 }
