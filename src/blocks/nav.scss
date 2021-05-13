@@ -26,6 +26,21 @@
   margin: 0;
 }
 
+%content-line {
+  background: c.$gray-400;
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+%content-position {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 .nav {
   &__logo {
     @extend %link-reset;
@@ -84,29 +99,21 @@
     top: 1.5em;
     z-index: 1000;
   }
-  &__hamburger,
-  &__hamburger::before,
-  &__hamburger::after {
-    background: c.$gray-400;
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
-  }
-  &__hamburger::before,
-  &__hamburger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
   &__hamburger {
+    @extend %content-line;
+
     display: block;
     position: relative;
     &::before {
+      @extend %content-line;
+      @extend %content-position;
+
       top: 6px;
     }
     &::after {
+      @extend %content-line;
+      @extend %content-position;
+
       bottom: 6px;
     }
   }
