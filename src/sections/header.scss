@@ -1,0 +1,11 @@
+@use '../utils/colors.scss' as c;
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: c.$gray-50;
+
+  display: flex;
+  justify-content: center;
+}
