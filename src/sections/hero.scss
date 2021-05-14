@@ -3,20 +3,24 @@
 @use '../utils/media.scss' as m;
 
 .hero {
+  background-color: c.$gray-50;
   text: {
     transform: uppercase;
     align: center;
   }
   &__container {
+    display: flex;
     height: 100vh;
-    display: grid;
-    place-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   &__title {
     font: {
       size: t.$fs-h1;
       family: t.$ff-title;
     }
+    letter-spacing: 0.15em;
+    padding-bottom: 0.3em;
     color: c.$gray-800;
   }
   &__subtitle {
@@ -24,6 +28,91 @@
       size: t.$fs-h2;
       family: t.$ff-body;
     }
+    letter-spacing: 0.1em;
     color: c.$gray-400;
+  }
+  &__headphones {
+    display: none;
+    @include m.tv {
+      position: absolute;
+      display: inline;
+      top: 200px;
+    }
+  }
+  &__glasses {
+    position: absolute;
+    display: inline;
+    top: 600px;
+    left: 50px;
+    @include m.tv {
+      top: 600px;
+      left: 200px;
+    }
+  }
+  &__pen-1 {
+    position: absolute;
+    display: none;
+    @include m.tv {
+      display: inline;
+      top: 800px;
+      left: 100px;
+    }
+  }
+  &__pen-2 {
+    position: absolute;
+    display: none;
+    @include m.tv {
+      display: inline;
+      top: 800px;
+      left: 100px;
+    }
+  }
+  &__mouse {
+    position: absolute;
+    display: inline;
+    top: 850px;
+    right: 40px;
+    @include m.tv {
+      top: 750px;
+      right: 200px;
+    }
+  }
+  &__pen-holder {
+    display: none;
+    @include m.tv {
+      position: absolute;
+      display: inline;
+      top: 550px;
+      right: 50px;
+    }
+  }
+  &__glass {
+    display: none;
+    z-index: 1;
+    @include m.tv {
+      position: absolute;
+      display: inline;
+      top: 300px;
+      right: 100px;
+    }
+  }
+  &__cork {
+    display: none;
+    @include m.tv {
+      position: absolute;
+      display: inline;
+      top: 316px;
+      right: 110px;
+    }
+  }
+}
+
+.scroll {
+  &__text {
+    font: {
+      size: t.$fs-body;
+      family: t.$ff-body;
+    }
+    color: c.$red-300;
   }
 }
