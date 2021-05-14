@@ -1,0 +1,29 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+
+.hero {
+  text: {
+    transform: uppercase;
+    align: center;
+  }
+  &__container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  &__title {
+    font: {
+      size: t.$fs-h1;
+      family: t.$ff-title;
+    }
+    color: c.$gray-800;
+  }
+  &__subtitle {
+    font: {
+      size: t.$fs-h2;
+      family: t.$ff-body;
+    }
+    color: c.$gray-400;
+  }
+}
