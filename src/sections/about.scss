@@ -1,32 +1,35 @@
 @use '../utils/typography.scss' as t;
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
-%content-line {
-  background: c.$gray-400;
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
+@use '../utils/buttons.scss' as b;
+@use '../sections/section.scss' as s;
 
-%content-position {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-}
 .about {
+  @extend .section;
+  height: 100%;
   &__container {
+    @extend .container;
   }
   &__text {
+    display: flex;
+    flex-direction: column;
     & h1::after {
       content: "";
-      width: 2em;
+      margin: 1em 0 2em 0;
+      background: c.$gray-400;
+      display: block;
+      width: 4em;
       height: 3px;
       border-radius: 1em;
     }
   }
+  &__link {
+    @extend .btn;
+    align-self: flex-start;
+    margin: 3em 0;
+  }
   &__img {
-    max-width: 300px;
+    max-width: 500px;
+    margin: 0 2em;
   }
 }

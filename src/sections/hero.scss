@@ -69,19 +69,17 @@
     display: none;
     filter: drop-shadow(v.$ds-100);
     @include m.desktop {
+      display: inline;
       top: 750px;
       right: 200px;
     }
   }
   &__pen-holder {
-    display: none;
+    position: absolute;
+    display: inline;
+    top: 490px;
+    right: 150px;
     filter: drop-shadow(v.$ds-200);
-    @include m.tablet {
-      position: absolute;
-      display: inline;
-      top: 490px;
-      right: 200px;
-    }
     @include m.desktop {
       position: absolute;
       display: inline;

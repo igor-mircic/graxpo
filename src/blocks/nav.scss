@@ -1,6 +1,7 @@
 @use '../utils/typography.scss' as t;
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
+@use '../sections/section.scss' as s;
 
 @mixin link-color($link: red, $hover: hotpink, $active: blue) {
   &:link {
@@ -43,11 +44,10 @@
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  overflow: hidden;
+  @extend .container;
+  flex-direction: row;
   padding: 1em;
+  justify-content: space-between;
   &__logo {
     @extend %link-reset;
 
