@@ -1,3 +1,6 @@
+@use '../utils/colors.scss' as c;
+@use '../utils/typography.scss' as t;
+
 *,
 *::before,
 *::after {
@@ -9,4 +12,23 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: c.$gray-50;
+}
+
+h1 {
+  font-size: t.$fs-h1;
+  color: c.$gray-800;
+}
+h2 {
+  font-size: t.$fs-h2;
+}
+h3 {
+  font-size: t.$fs-h3;
+}
+p {
+  font-size: t.$fs-body;
+  color: c.$gray-400;
 }

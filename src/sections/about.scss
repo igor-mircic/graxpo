@@ -1,0 +1,32 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+%content-line {
+  background: c.$gray-400;
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+%content-position {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.about {
+  &__container {
+  }
+  &__text {
+    & h1::after {
+      content: "";
+      width: 2em;
+      height: 3px;
+      border-radius: 1em;
+    }
+  }
+  &__img {
+    max-width: 300px;
+  }
+}
