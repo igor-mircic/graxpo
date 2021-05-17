@@ -10,7 +10,7 @@
   &__container {
     @extend .container;
   }
-  &__text {
+  &__header {
     display: flex;
     flex-direction: column;
     & h1::after {
