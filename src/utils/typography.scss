@@ -1,3 +1,5 @@
+@use '../utils/colors.scss' as c;
+
 @import "~/node_modules/@fontsource/leckerli-one/latin-400.css";
 @import "~/node_modules/@fontsource/roboto/latin-400.css";
 @import "~/node_modules/@fontsource/open-sans/latin-400.css";
@@ -10,3 +12,32 @@ $fs-h1: 1.75rem;
 $fs-h2: 1.5rem;
 $fs-h3: 1.25rem;
 $fs-body: 1rem;
+
+body {
+  background: c.$gray-50;
+}
+
+h1 {
+  font-size: $fs-h1;
+  color: c.$gray-800;
+
+  &::after {
+    content: "";
+    margin: 1em 0 2em 0;
+    background: c.$gray-400;
+    display: block;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+  }
+}
+h2 {
+  font-size: $fs-h2;
+}
+h3 {
+  font-size: $fs-h3;
+}
+p {
+  font-size: $fs-body;
+  color: c.$gray-400;
+}

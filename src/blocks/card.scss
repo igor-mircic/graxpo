@@ -1,48 +1,76 @@
 @use '../utils/typography.scss' as t;
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
-@use '../sections/section.scss' as s;
+@use '../utils/vars.scss' as v;
 
-.card__container {
+.cards {
   display: flex;
-  flex-direction: row;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  background-color: orange;
-  padding: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-
-  &__image {
+  gap: 2em;
+  .card {
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    box-shadow: v.$ds-soft;
+    padding: 2em;
+    border-radius: 0.8em;
 
-    div {
+    &:hover {
+      background-color: c.$red-400;
+      & > .card__text > .card__title {
+        color: c.$gray-50;
+      }
+      & > .card__text > .card__paragraph {
+        color: c.$gray-50;
+      }
+      & > .card__image > div {
+        background-color: c.$gray-50;
+      }
+      & > .card__image > div > svg {
+        color: c.$red-400;
+      }
+      transition: all 250ms ease-in-out;
+    }
+
+    @include m.tablet {
+      flex-direction: row;
+    }
+
+    &__image {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 5em;
-      height: 5em;
-      background-color: c.$red-300;
-      border: 1px solid c.$red-300;
-      border-radius: 100%;
-
-      svg {
-        font-size: 3em;
-        color: c.$gray-50;
+      align-self: flex-start;
+      padding: 0 1em 1em 0;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 6em;
+        height: 6em;
+        background-color: c.$red-300;
+        border-radius: 100%;
+        svg {
+          font-size: 3em;
+          color: c.$gray-50;
+        }
       }
     }
-  }
-  &__text {
-    display: flex;
-    flex-direction: column;
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 1.2em;
+      color: c.$gray-400;
+      &::after {
+        background: c.$gray-100;
+      }
+    }
   }
 }

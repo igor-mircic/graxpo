@@ -44,10 +44,14 @@
 }
 
 .nav {
-  @extend .container;
+  display: flex;
   flex-direction: row;
-  padding: 1em;
   justify-content: space-between;
+  width: 100vw;
+  @include m.desktop {
+    width: 1200px;
+  }
+  padding: 1em;
   &__logo {
     @extend %link-reset;
 

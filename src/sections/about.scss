@@ -2,13 +2,21 @@
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
 @use '../utils/buttons.scss' as b;
-@use '../sections/section.scss' as s;
+@import "../sections/section.scss";
 
 .about {
   @extend .section;
   height: 100%;
+  background-color: c.$gray-0;
   &__container {
-    @extend .container;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    width: 100vw;
+    @include m.desktop {
+      flex-direction: row;
+      width: 1200px;
+    }
   }
   &__header {
     display: flex;
