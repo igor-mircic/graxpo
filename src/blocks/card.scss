@@ -2,26 +2,47 @@
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
 @use '../sections/section.scss' as s;
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  &__image {
-    background-color: c.$red-300;
+  background-color: orange;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 
+  &__image {
     display: flex;
-    flex-basis: 0 0 5em;
-    height: 5em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 100%;
 
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // font-size: 3em;
-    // color: c.$gray-50;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 5em;
+      height: 5em;
+      background-color: c.$red-300;
+      border: 1px solid c.$red-300;
+      border-radius: 100%;
+
+      svg {
+        font-size: 3em;
+        color: c.$gray-50;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
   }
 }
