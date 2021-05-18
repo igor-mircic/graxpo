@@ -1,0 +1,27 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../sections/section.scss' as s;
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    background-color: c.$red-300;
+
+    display: flex;
+    flex-basis: 0 0 5em;
+    height: 5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // font-size: 3em;
+    // color: c.$gray-50;
+  }
+}
