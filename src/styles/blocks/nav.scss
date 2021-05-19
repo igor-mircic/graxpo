@@ -1,22 +1,8 @@
 @use '../utils/typography.scss' as t;
 @use '../utils/colors.scss' as c;
 @use '../utils/media.scss' as m;
+@use '../utils/mixins.scss' as mix;
 @use '../sections/section.scss' as s;
-
-@mixin link-color($link: red, $hover: hotpink, $active: blue) {
-  &:link {
-    color: $link;
-  }
-  &:visited {
-    color: $link;
-  }
-  &:hover {
-    color: $hover;
-  }
-  &:active {
-    color: $active;
-  }
-}
 
 %link-reset {
   text-decoration: none;
@@ -60,7 +46,7 @@
       size: t.$fs-h2;
     }
 
-    @include link-color(
+    @include mix.link-color(
       $link: c.$red-300,
       $hover: c.$red-400,
       $active: c.$red-300
@@ -107,7 +93,7 @@
     }
     text-transform: uppercase;
 
-    @include link-color(
+    @include mix.link-color(
       $link: c.$gray-400,
       $hover: c.$red-300,
       $active: c.$red-400

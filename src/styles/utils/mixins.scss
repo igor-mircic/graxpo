@@ -1,0 +1,14 @@
+@mixin link-color($link: red, $hover: hotpink, $active: blue) {
+  &:link {
+    color: $link;
+  }
+  &:visited {
+    color: $link;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
