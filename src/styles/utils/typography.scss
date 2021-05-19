@@ -15,11 +15,14 @@ $fs-body: 1rem;
 
 body {
   background: c.$gray-50;
+  font-family: $ff-body;
 }
 
 h1 {
   font-size: $fs-h1;
   color: c.$gray-800;
+  text-transform: uppercase;
+  font-family: $ff-title;
 
   &::after {
     content: "";
@@ -33,9 +36,12 @@ h1 {
 }
 h2 {
   font-size: $fs-h2;
+  font-family: $ff-body;
+  text-transform: uppercase;
 }
 h3 {
   font-size: $fs-h3;
+  font-family: $ff-body;
 }
 p {
   font-size: $fs-body;
