@@ -312,3 +312,38 @@
     }
   }
 }
+.our-ideas {
+  @extend .section;
+  background-color: c.$gray-0;
+  background: {
+    image: url("./images/cta.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2em;
+    & h1 {
+      color: c.$gray-0;
+      &::after {
+        width: 0;
+      }
+    }
+    & p {
+      color: c.$gray-0;
+    }
+  }
+  &__link {
+    display: inline-block;
+  }
+}

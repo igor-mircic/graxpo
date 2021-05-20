@@ -1,0 +1,84 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@import "../sections/section.scss";
+
+.gallery {
+  @extend .section;
+  background-color: c.$gray-50;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    @include m.desktop {
+      width: 1200px;
+    }
+    padding: 1em;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+      font-size: t.$fs-h3;
+    }
+    & h1::after {
+      content: "";
+      width: 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+    grid-auto-flow: dense;
+  }
+  &__item {
+    @include m.desktop {
+      &--tall {
+        grid-row: span 2 / auto;
+      }
+      &--wide {
+        grid-column: span 2 / auto;
+      }
+    }
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  &__item:hover > &__overlay {
+    filter: opacity(90%);
+    transition: filter 300ms ease-in-out;
+  }
+  &__overlay {
+    background-color: c.$red-400;
+    filter: opacity(0%);
+
+    grid-area: 1 / 1 / 2 / 2;
+    // width: 100%;
+    // height: 100%;
+    margin: 1em;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 3em;
+
+    & h1 {
+      color: c.$gray-50;
+      font-size: t.$fs-h3;
+      &::after {
+        background-color: c.$gray-50;
+      }
+    }
+  }
+}
