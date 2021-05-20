@@ -1,0 +1,83 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@import "../sections/section.scss";
+
+.subscribe {
+  @extend .section;
+  background-color: c.$gray-0;
+  background: {
+    image: url("./images/subscribeBG.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    @include m.desktop {
+      width: 1200px;
+      flex-direction: row;
+      gap: 4em;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 4em;
+    & h1 {
+      display: block;
+      margin: 1em auto;
+      color: c.$gray-0;
+      &::after {
+        content: "";
+        margin: 1em auto;
+        background: c.$gray-0;
+        display: block;
+        width: 4em;
+        height: 3px;
+        border-radius: 1em;
+        background-color: c.$gray-0;
+        @include m.desktop {
+          margin: 1em 0;
+        }
+      }
+      @include m.desktop {
+        text-align: left;
+        margin-left: 0;
+      }
+    }
+    & p {
+      color: c.$gray-0;
+      text-align: left;
+    }
+  }
+  &__form {
+    display: flex;
+  }
+  &__email {
+    background: none;
+    border: 2px solid c.$gray-0;
+    border-radius: 0;
+    padding: 0.8em;
+    width: 500px;
+    &:focus {
+      outline: 0;
+    }
+    &::placeholder {
+      color: c.$gray-100;
+    }
+  }
+  &__submit {
+    border: 2px solid c.$gray-0;
+    border-left: none;
+    border-radius: 0;
+    background: none;
+  }
+}
