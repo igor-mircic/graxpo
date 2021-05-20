@@ -201,8 +201,11 @@
   }
   &__list {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
+    flex-direction: column;
+    @include m.desktop {
+      flex-direction: row;
+    }
   }
   &__item {
     position: relative;
@@ -238,5 +241,74 @@
       $hover: c.$gray-0,
       $active: c.$gray-0
     );
+  }
+}
+
+.our-best-service {
+  @extend .section;
+  background-color: c.$gray-0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    @include m.desktop {
+      width: 1300px;
+    }
+    padding: 1em;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 4em;
+    & h1::after {
+      content: "";
+      margin: 1em auto;
+      background: c.$gray-400;
+      display: block;
+      width: 4em;
+      height: 3px;
+      border-radius: 1em;
+    }
+  }
+  .service {
+    &__list {
+      background-color: c.$red-400;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    &__item {
+      margin: 1em 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include m.desktop {
+        flex-direction: row;
+        margin: 0;
+        gap: 8em;
+      }
+    }
+    &__header {
+      margin: 1em;
+      h1 {
+        color: c.$gray-0;
+        font-size: t.$fs-h3;
+        &::after {
+          background-color: c.$gray-0;
+        }
+      }
+      p {
+        color: c.$gray-0;
+      }
+    }
+    &__img {
+      width: 80%;
+    }
+    &__left {
+      @include m.desktop {
+        flex-direction: row-reverse;
+      }
+    }
   }
 }
