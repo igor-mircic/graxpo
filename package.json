@@ -34,6 +34,7 @@
     "@fontsource/leckerli-one": "^4.3.0",
     "@fontsource/open-sans": "^4.3.0",
     "@fontsource/roboto": "^4.3.0",
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "swiper": "^6.6.2"
   }
 }

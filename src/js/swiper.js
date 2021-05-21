@@ -1,3 +1,10 @@
+// import Swiper bundle with all modules installed
+import Swiper from "swiper/bundle";
+
+// import Swiper styles
+import "swiper/swiper-bundle.css";
+
+// Swiper carousel - used for customers section
 const swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -5,17 +12,5 @@ const swiper = new Swiper(".swiper-container", {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
-  },
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    900: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 480px
-    1260: {
-      spaceBetween: 40,
-      slidesPerView: 3,
-    },
   },
 });
