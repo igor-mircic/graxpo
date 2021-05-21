@@ -1,0 +1,101 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@import "../sections/section.scss";
+
+.blog {
+  @extend .section;
+  background-color: c.$gray-50;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include m.desktop {
+      width: 1200px;
+    }
+    padding: 1em;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 4em;
+    & h1::after {
+      content: "";
+      margin: 1em auto;
+      background: c.$gray-400;
+      display: block;
+      width: 4em;
+      height: 3px;
+      border-radius: 1em;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    @include m.desktop {
+      flex-direction: row;
+    }
+  }
+  &__item {
+    position: relative;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+  &__overlay {
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: c.$red-400;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+    h1 {
+      font-size: 1.2em;
+      color: c.$gray-0;
+      &::after {
+        margin-bottom: 0.8em;
+        background-color: c.$gray-0;
+      }
+    }
+    p {
+      color: c.$gray-0;
+    }
+  }
+  &__date {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 0.7em;
+    & div {
+      color: c.$gray-0;
+      padding-right: 6px;
+    }
+    & p {
+      font-size: 0.7em;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    border: 1px solid c.$gray-50;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    @include mix.link-color(
+      $link: c.$gray-0,
+      $hover: c.$gray-0,
+      $active: c.$gray-0
+    );
+  }
+}
