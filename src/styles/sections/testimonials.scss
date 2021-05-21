@@ -5,11 +5,11 @@
 @use '../utils/mixins.scss' as mix;
 @import "../sections/section.scss";
 
-.subscribe {
+.testimonials {
   @extend .section;
   background-color: c.$gray-0;
   background: {
-    image: url("./images/subscribeBG.png");
+    image: url("./images/testimonialsBg.png");
     repeat: no-repeat;
     size: cover;
     position: center;
@@ -21,9 +21,7 @@
     align-items: center;
     padding: 2em 1em;
     @include m.desktop {
-      width: 1200px;
-      flex-direction: row;
-      gap: 4em;
+      width: 1000px;
     }
   }
   &__header {
@@ -44,42 +42,30 @@
         height: 3px;
         border-radius: 1em;
         background-color: c.$gray-0;
-        @include m.desktop {
-          margin: 1em 0;
-        }
-      }
-      @include m.desktop {
-        text-align: left;
-        margin-left: 0;
       }
     }
-    & p {
+    & h2 {
       color: c.$gray-0;
-      text-align: left;
+      letter-spacing: 8px;
+      font-weight: 400;
     }
   }
-  &__form {
+  & .customer {
     display: flex;
-  }
-  &__email {
-    background: none;
-    border: 2px solid c.$gray-0;
-    border-radius: 0;
-    padding: 0.8em;
-    @include m.desktop {
-      width: 500px;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    &__testimonial {
+      color: c.$gray-50;
+      font-style: italic;
+      text-align: center;
     }
-    &:focus {
-      outline: 0;
+    &__name {
+      color: c.$red-400;
+      text-transform: uppercase;
+      font-size: t.$fs-h2;
+      font-weight: 500;
     }
-    &::placeholder {
-      color: c.$gray-100;
-    }
-  }
-  &__submit {
-    border: 2px solid c.$gray-0;
-    border-left: none;
-    border-radius: 0;
-    background: none;
   }
 }
