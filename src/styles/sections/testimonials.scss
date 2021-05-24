@@ -7,6 +7,8 @@
 
 .testimonials {
   @extend .section;
+  padding: 90px 0;
+
   background-color: c.$gray-0;
   background: {
     image: url("./images/testimonialsBg.png");
@@ -20,7 +22,6 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    padding: 2em 1em;
     width: 100%;
     @include m.desktop {
       width: 1000px;
@@ -30,7 +31,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
     & h1 {
       display: block;
       margin: 1em auto;

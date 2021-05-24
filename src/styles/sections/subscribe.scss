@@ -7,6 +7,7 @@
 
 .subscribe {
   @extend .section;
+  padding: 90px 0;
   background-color: c.$gray-0;
   background: {
     image: url("./images/subscribeBG.png");
@@ -19,7 +20,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em 1em;
     @include m.desktop {
       width: 1200px;
       flex-direction: row;
@@ -30,7 +30,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 4em;
     & h1 {
       display: block;
       margin: 1em auto;

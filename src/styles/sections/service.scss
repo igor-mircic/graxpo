@@ -36,6 +36,8 @@
 
 .stats {
   @extend .section;
+  margin-top: 90px;
+  padding: 70px 0;
   background: {
     image: url("./images/numSection.jpg");
     repeat: no-repeat;
@@ -314,6 +316,7 @@
 }
 .our-ideas {
   @extend .section;
+  padding: 90px 0;
   background-color: c.$gray-0;
   background: {
     image: url("./images/cta.png");
@@ -326,7 +329,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4em 0;
   }
   &__header {
     display: flex;
