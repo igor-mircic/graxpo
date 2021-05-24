@@ -7,7 +7,7 @@
 .about {
   @extend .section;
   height: 100%;
-  background-color: c.$gray-0;
+  background-color: c.$gray-50;
   &__container {
     display: flex;
     flex-direction: column;

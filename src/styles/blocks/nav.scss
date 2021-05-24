@@ -34,8 +34,9 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
+  background-color: c.$gray-100;
   @include m.desktop {
-    width: 1200px;
+    width: 1250px;
   }
   padding: 1em;
   &__logo {
@@ -55,8 +56,8 @@
   &__list {
     @extend %list-reset;
 
-    background: c.$gray-50;
-    padding: 10em 0;
+    background: c.$gray-100;
+    padding: 7em 0;
 
     position: fixed;
     top: 0;
@@ -89,7 +90,7 @@
 
     font: {
       family: t.$ff-body;
-      size: t.$fs-h2;
+      size: t.$fs-h3;
     }
     text-transform: uppercase;
 
@@ -99,7 +100,7 @@
       $active: c.$red-400
     );
     @include m.desktop {
-      font-size: t.$fs-h3;
+      font-size: t.$fs-body;
     }
   }
   &__toggle {

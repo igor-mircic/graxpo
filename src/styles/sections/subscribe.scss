@@ -66,6 +66,7 @@
     border: 2px solid c.$gray-0;
     border-radius: 0;
     padding: 0.8em;
+    width: 100%;
     @include m.desktop {
       width: 500px;
     }
