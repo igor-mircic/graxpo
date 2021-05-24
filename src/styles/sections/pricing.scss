@@ -1,0 +1,85 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@use '../utils/vars.scss' as v;
+@import "../sections/section.scss";
+
+.pricing {
+  @extend .section;
+  background-color: c.$gray-50;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include m.desktop {
+      width: 1200px;
+    }
+    padding: 1em;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 4em;
+    & h1::after {
+      content: "";
+      margin: 1em auto;
+      background: c.$gray-400;
+      display: block;
+      width: 4em;
+      height: 3px;
+      border-radius: 1em;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    @include m.tv {
+      flex-flow: row nowrap;
+    }
+  }
+  & .card {
+    border: 1px solid c.$gray-200;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include m.tablet {
+      width: 400px;
+    }
+    & > div {
+      width: 100%;
+      color: c.$gray-400;
+      border-bottom: 1px solid c.$gray-200;
+      padding: 1em;
+    }
+    &__title {
+      font-size: t.$fs-h2;
+      font-weight: 600;
+      line-height: 2em;
+      text-transform: uppercase;
+    }
+    &__link {
+      margin: 2em;
+      background: none;
+      color: c.$gray-400;
+      border: 1px solid c.$gray-200;
+      border-radius: 8px;
+    }
+    &--featured {
+      box-shadow: v.$ds-400;
+      & .card__link {
+        background: c.$red-400;
+        color: c.$gray-0;
+      }
+    }
+  }
+}
