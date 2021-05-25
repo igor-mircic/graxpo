@@ -42,6 +42,7 @@
       display: flex;
       gap: 1.3em;
       & input {
+        width: 100%;
         flex: 1;
         padding: 0.5em 0;
         border: 2px solid c.$gray-100;

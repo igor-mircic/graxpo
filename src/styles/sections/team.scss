@@ -8,7 +8,6 @@
 .team {
   @extend .section;
   background-color: c.$gray-75;
-  margin-bottom: 5em;
   &__container {
     display: flex;
     flex-direction: column;
@@ -50,6 +49,7 @@
     position: relative;
     text-align: center;
     width: 300px;
+    margin-bottom: 120px;
     @include m.desktop {
       height: 400px;
       width: 400px;

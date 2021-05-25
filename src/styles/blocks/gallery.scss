@@ -8,6 +8,7 @@
 .gallery {
   @extend .section;
   background-color: c.$gray-50;
+  padding: 0;
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@
       width: 1200px;
     }
     padding: 1em;
+    padding-bottom: 0;
   }
   &__header {
     display: flex;
