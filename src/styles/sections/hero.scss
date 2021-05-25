@@ -5,31 +5,26 @@
 @import "../sections/section.scss";
 
 .hero {
-  @extend .section;
-  padding-top: 0;
   background-color: c.$gray-100;
   text: {
     transform: uppercase;
     align: center;
   }
+  height: calc(100vh - 62px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
   &__container {
-    height: 100vh;
-    width: 100vw;
-    @include m.desktop {
-      width: 100vw;
-    }
-    @include m.tv {
-      width: 1300px;
-    }
     position: relative;
-    margin: 0 auto;
+    width: fit-content;
   }
+
   &__header {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
   }
+
   &__title {
     font: {
       size: t.$fs-title;
@@ -39,6 +34,7 @@
     letter-spacing: 0.15em;
     color: c.$gray-800;
   }
+
   &__subtitle {
     font: {
       size: t.$fs-body;
@@ -48,121 +44,158 @@
     line-height: 2em;
     color: c.$gray-400;
   }
+
   &__headphones {
+    position: absolute;
     display: none;
     filter: drop-shadow(v.$ds-400);
-    @include m.desktop {
-      position: absolute;
-      display: inline;
-      left: 0;
-      top: 100px;
+
+    @media (min-width: 1000px) and (min-height: 800px) {
+      display: block;
+      bottom: 0;
+      left: -250px;
+    }
+
+    @media (min-width: 1300px) and (min-height: 800px) {
+      bottom: -60px;
+      left: -420px;
     }
   }
+
   &__glasses {
     position: absolute;
     display: none;
     filter: drop-shadow(v.$ds-200);
-    @include m.tablet {
-      display: inline;
-      top: 70px;
-      left: 0;
+
+    @media (min-width: 320px) and (min-height: 650px) {
+      display: block;
+      top: 150px;
+      left: 20px;
     }
-    @include m.desktop {
-      display: inline;
-      top: 420px;
-      left: 200px;
+
+    @media (min-width: 800px) and (min-height: 650px) {
+      top: 150px;
+      left: -140px;
     }
-    @include m.landscape {
-      display: none;
+
+    @media (min-width: 1300px) and (min-height: 800px) {
+      top: 110px;
+      left: -220px;
     }
   }
+
+  &__pens {
+    position: absolute;
+    display: none;
+    filter: drop-shadow(v.$ds-200);
+
+    @media (min-width: 1000px) and (min-height: 800px) {
+      display: block;
+      bottom: -220px;
+      left: -220px;
+    }
+
+    @media (min-width: 1300px) and (min-height: 800px) {
+      bottom: -220px;
+      left: -370px;
+    }
+  }
+
   &__pen-1 {
     position: absolute;
-    display: inline;
-    bottom: 130px;
-    left: 50px;
-    filter: drop-shadow(v.$ds-200);
-    @include m.landscape {
-      display: none;
-    }
+    filter: drop-shadow(v.$ds-400);
   }
+
   &__pen-2 {
     position: absolute;
-    display: inline;
-    bottom: 141px;
-    left: 23px;
     filter: drop-shadow(v.$ds-200);
-    @include m.landscape {
-      display: none;
-    }
   }
+
   &__mouse {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-100);
-    @include m.desktop {
-      display: inline;
-      top: 600px;
-      right: 200px;
+    filter: drop-shadow(v.$ds-200);
+
+    @media (min-width: 800px) and (min-height: 650px) {
+      display: block;
+      top: 200px;
+      right: -80px;
+    }
+
+    @media (min-width: 1300px) and (min-height: 800px) {
+      top: 200px;
+      right: -170px;
     }
   }
+
   &__pen-holder {
     position: absolute;
     display: none;
-    top: 490px;
-    right: 150px;
     filter: drop-shadow(v.$ds-200);
-    @include m.desktop {
-      position: absolute;
-      display: inline;
-      top: 400px;
-      right: 21px;
-    }
-  }
-  &__glass {
-    position: absolute;
-    display: inline;
-    top: 80px;
-    right: 50px;
-    z-index: 1;
-    filter: drop-shadow(v.$ds-200);
-    @include m.desktop {
-      display: inline;
-      top: 200px;
-      right: 100px;
+
+    @media (min-width: 1000px) and (min-height: 800px) {
+      display: block;
+      top: 0;
+      right: -250px;
     }
 
-    @include m.landscape {
-      display: none;
+    @media (min-width: 1300px) and (min-height: 800px) {
+      top: 0;
+      right: -350px;
     }
   }
-  &__cork {
+
+  &__glass-cork {
     position: absolute;
-    display: inline;
-    top: 80px;
+    display: none;
+
+    @media (min-width: 320px) and (min-height: 650px) {
+      display: block;
+      bottom: 200px;
+      right: 20px;
+    }
+
+    @media (min-width: 800px) and (min-height: 650px) {
+      bottom: 200px;
+      right: -230px;
+    }
+
+    @media (min-width: 1300px) and (min-height: 800px) {
+      bottom: 150px;
+      right: -360px;
+    }
+  }
+
+  &__glass {
+    position: relative;
     right: 50px;
     filter: drop-shadow(v.$ds-200);
-    @include m.desktop {
-      display: inline;
-      top: 216px;
-      right: 110px;
-    }
-    @include m.landscape {
-      display: none;
-    }
+  }
+
+  &__cork {
+    position: relative;
+    left: 50px;
+    top: 15px;
+    filter: drop-shadow(v.$ds-200);
   }
 }
 
 .scroll {
   position: absolute;
-  bottom: 50px;
   left: 0;
   right: 0;
+  bottom: 20px;
+  justify-self: flex-end;
   &__text {
     font: {
       size: t.$fs-body;
       family: t.$ff-body;
     }
     color: c.$red-300;
+  }
+
+  display: none;
+  @media (min-height: 315px) {
+    display: block;
   }
 }

@@ -1,9 +1,8 @@
 @use '../utils/colors.scss' as c;
 
 .header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 999999;
   background: c.$gray-100;
 
