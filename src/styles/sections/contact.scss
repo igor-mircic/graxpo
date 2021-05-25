@@ -1,0 +1,89 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@use '../utils/vars.scss' as v;
+@import "../sections/section.scss";
+
+.contact {
+  @extend .section;
+  background-color: c.$gray-50;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include m.desktop {
+      width: 1200px;
+    }
+    padding: 1em;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 4em;
+    & h1::after {
+      content: "";
+      margin: 1em auto;
+      background: c.$gray-400;
+      display: block;
+      width: 4em;
+      height: 3px;
+      border-radius: 1em;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5em;
+    & .inputs {
+      display: flex;
+      gap: 1.3em;
+      & input {
+        flex: 1;
+        padding: 0.5em 0;
+        border: 2px solid c.$gray-100;
+      }
+    }
+    & textarea {
+      padding: 0.5em 0;
+      border: 2px solid c.$gray-100;
+      @include m.desktop {
+        width: 560px;
+      }
+    }
+    .submit {
+      align-self: flex-start;
+      padding: 1em 6em;
+    }
+  }
+  &__wraper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 70px;
+    @include m.desktop {
+      flex-flow: row nowrap;
+    }
+  }
+  &__list {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 40px;
+  }
+  &__icon {
+    width: 2em;
+    height: 2em;
+    svg {
+      font-size: 2em;
+      color: c.$red-400;
+    }
+  }
+}
