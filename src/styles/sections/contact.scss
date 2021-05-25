@@ -17,6 +17,7 @@
       width: 1200px;
     }
     padding: 1em;
+    margin-bottom: 50px;
   }
   &__header {
     display: flex;
@@ -62,7 +63,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    gap: 70px;
+    gap: 50px;
     @include m.desktop {
       flex-flow: row nowrap;
     }

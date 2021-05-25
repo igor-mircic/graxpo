@@ -1,0 +1,19 @@
+@use '../utils/typography.scss' as t;
+@use '../utils/colors.scss' as c;
+@use '../utils/media.scss' as m;
+@use '../utils/buttons.scss' as b;
+@use '../utils/mixins.scss' as mix;
+@use '../utils/vars.scss' as v;
+@import "../sections/section.scss";
+
+.footer {
+  height: 80px;
+  background-color: c.$red-400;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  &__copyright {
+    color: c.$gray-0;
+  }
+}
