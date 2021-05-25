@@ -1,13 +1,12 @@
 @use '../utils/colors.scss' as c;
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0px;
+  width: 100%;
   z-index: 999999;
   background: c.$gray-100;
 
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 }

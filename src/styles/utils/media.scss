@@ -19,3 +19,9 @@ $tv-width: 1300px;
     @content;
   }
 }
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
