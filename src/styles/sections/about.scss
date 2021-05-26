@@ -11,7 +11,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    padding: 0 1em;
+    padding: 0 30px;
     width: 100vw;
     @include m.desktop {
       flex-direction: row;

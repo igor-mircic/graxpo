@@ -13,5 +13,9 @@ html,
 body {
   scroll-behavior: smooth;
   max-width: 100%;
+}
+
+main,
+footer {
   overflow-x: hidden;
 }

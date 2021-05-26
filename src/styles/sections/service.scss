@@ -15,7 +15,7 @@
     @include m.desktop {
       width: 1300px;
     }
-    padding: 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;
@@ -94,7 +94,7 @@
     @include m.desktop {
       width: 1300px;
     }
-    padding: 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;
@@ -184,7 +184,7 @@
     @include m.desktop {
       width: 1300px;
     }
-    padding: 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;
@@ -256,7 +256,7 @@
     @include m.desktop {
       width: 1300px;
     }
-    padding: 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;
@@ -329,7 +329,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;

@@ -16,7 +16,7 @@
     @include m.desktop {
       width: 1300px;
     }
-    padding: 1em;
+    padding: 0 30px;
   }
   &__header {
     display: flex;
@@ -39,7 +39,6 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 8em;
     @include m.tv {
       gap: 2em;
       flex-direction: row;
@@ -48,12 +47,9 @@
   &__item {
     position: relative;
     text-align: center;
-    width: 300px;
     margin-bottom: 120px;
-    @include m.desktop {
-      height: 400px;
-      width: 400px;
-    }
+    height: 350px;
+    width: 270px;
     h2 {
       padding-top: 1em;
       font-size: t.$fs-h3;
@@ -74,10 +70,10 @@
     object-fit: cover;
   }
   &__overlay {
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    height: 50%;
+    top: 175px;
+    left: 15px;
+    height: 160px;
+    width: 240px;
     position: absolute;
     background-color: c.$red-400;
     filter: opacity(0%);
@@ -86,12 +82,12 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    padding: 2em;
+    padding: 1.4em;
+    gap: 0.8em;
     & p {
       color: c.$gray-0;
-      line-height: 1.8em;
-      font-size: 0.9em;
+      line-height: 2em;
+      font-size: 0.7em;
     }
   }
   &__link {
@@ -115,8 +111,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 3em;
-      height: 3em;
+      width: 2em;
+      height: 2em;
       background: none;
       border: 1px solid c.$gray-0;
       border-radius: 100%;

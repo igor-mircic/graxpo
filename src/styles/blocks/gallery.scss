@@ -8,7 +8,6 @@
 .gallery {
   @extend .section;
   background-color: c.$gray-50;
-  padding: 0;
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,8 +15,8 @@
     @include m.desktop {
       width: 1200px;
     }
-    padding: 1em;
-    padding-bottom: 0;
+    padding: 0 30px;
+    margin-bottom: 50px;
   }
   &__header {
     display: flex;
@@ -67,19 +66,33 @@
     filter: opacity(0%);
 
     grid-area: 1 / 1 / 2 / 2;
-    // width: 100%;
-    // height: 100%;
     margin: 1em;
 
     display: flex;
-    align-items: flex-end;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
     padding: 3em;
 
-    & h1 {
+    & h2 {
       color: c.$gray-50;
       font-size: t.$fs-h3;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.2em;
+    }
+    & h3 {
+      color: #f8d9d6;
+      font-size: t.$fs-body;
+      text-transform: uppercase;
+
       &::after {
-        background-color: c.$gray-50;
+        content: "";
+        margin-top: 1em;
+        background: #c2c2c2;
+        display: block;
+        width: 2em;
+        height: 3px;
+        border-radius: 1em;
       }
     }
   }

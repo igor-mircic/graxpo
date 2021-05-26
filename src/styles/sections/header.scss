@@ -2,8 +2,10 @@
 
 .header {
   position: sticky;
-  top: 0;
-  z-index: 999999;
+  position: -webkit-sticky;
+  top: 0px;
+  z-index: 999;
+  margin: 0;
   background: c.$gray-100;
 
   display: flex;

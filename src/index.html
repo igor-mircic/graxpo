@@ -396,80 +396,92 @@
           <div class="gallery__items">
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img1.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--tall">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img2.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--tall gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img3.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img4.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img5.png" alt="" />
             </div>
             <div class="gallery__item">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img6.png" alt="" />
             </div>
             <div class="gallery__item">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img7.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img8.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img9.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img10.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide gallery__item--tall">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img11.png" alt="" />
             </div>
             <div class="gallery__item gallery__item--wide gallery__item--tall">
               <div class="gallery__overlay">
-                <h1>The Winter Tal's</h1>
+                <h2>The Winter Tal's</h2>
+                <h3>Raf Redwan</h3>
               </div>
               <img class="gallery__image" src="./images/p-img12.png" alt="" />
             </div>
           </div>
         </div>
       </section>
-      <section class="subscribe">
+      <section id="subscribe" class="subscribe">
         <div class="subscribe__container">
           <header class="subscribe__header">
             <h1>Subscribe to update</h1>
@@ -479,13 +491,17 @@
               libero dolores aut repellat reiciendis quibusdam.
             </p>
           </header>
-          <form action="#" class="subscribe__form">
+          <form
+            action="#subscribe"
+            onsubmit="alert('You are now subscribed.');"
+            class="subscribe__form"
+          >
             <input
-              onkeyup="checkFormsValidity();"
               class="subscribe__email"
               type="email"
               name="email"
               placeholder="Enter email Adress"
+              required
             />
             <input
               class="subscribe__submit btn"
@@ -529,8 +545,8 @@
               <img class="team__image" src="./images/radRedwan.png" alt="" />
               <div class="team__overlay">
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
-                  incidunt atque maiores quod error inventore molestias aliquam!
+                  Hi! I'm Redwan from Bangladesh. I am a Professional graphic
+                  designer & expert on print and UI/UX.
                 </p>
                 <div class="team__social">
                   <div>
@@ -749,7 +765,7 @@
           <div class="contact__wraper">
             <form
               class="contact__form"
-              action=""
+              action="#contact"
               onsubmit="alert('You submitted the form.');"
             >
               <div class="inputs">
