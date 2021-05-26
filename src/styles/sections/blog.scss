@@ -61,16 +61,33 @@
     justify-content: center;
     align-items: flex-start;
     padding: 1em;
-    h1 {
-      font-size: 1.2em;
+    & h2 {
       color: c.$gray-0;
+      font-size: t.$fs-body;
+      font-family: t.$ff-title;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.2em;
+    }
+    & h3 {
+      color: #f8d9d6;
+      font-size: 0.85em;
+      font-family: t.$ff-title;
+      text-transform: uppercase;
+
       &::after {
-        margin-bottom: 0.8em;
-        background-color: c.$gray-0;
+        content: "";
+        margin: 1em 0;
+        background: c.$gray-0;
+        display: block;
+        width: 2em;
+        height: 3px;
+        border-radius: 1em;
       }
     }
+
     p {
       color: c.$gray-0;
+      font-size: 0.75em;
     }
   }
   &__date {

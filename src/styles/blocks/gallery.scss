@@ -77,12 +77,14 @@
     & h2 {
       color: c.$gray-50;
       font-size: t.$fs-h3;
+      font-family: t.$ff-title;
       margin-bottom: 0.2em;
       letter-spacing: 0.2em;
     }
     & h3 {
       color: #f8d9d6;
       font-size: t.$fs-body;
+      font-family: t.$ff-title;
       text-transform: uppercase;
 
       &::after {
