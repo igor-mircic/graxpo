@@ -316,7 +316,7 @@
 }
 .our-ideas {
   @extend .section;
-  padding: 90px 0;
+  padding: 110px 0;
   background-color: c.$gray-0;
   background: {
     image: url("./images/cta.png");
@@ -329,6 +329,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1em;
   }
   &__header {
     display: flex;
@@ -337,15 +338,26 @@
     padding-bottom: 2em;
     & h1 {
       color: c.$gray-0;
+      font-size: 1.9em;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      padding-bottom: 0.2em;
       &::after {
         width: 0;
+        height: 0;
+        padding-bottom: 0em;
+        margin-bottom: 0;
       }
     }
-    & p {
+    & h2 {
+      font-size: 1.3em;
+      font-weight: 300;
+      font-family: t.$ff-title;
       color: c.$gray-0;
     }
   }
   &__link {
     display: inline-block;
+    font-size: t.$fs-body;
   }
 }

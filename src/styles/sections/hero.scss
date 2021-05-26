@@ -20,6 +20,7 @@
   &__container {
     position: relative;
     width: fit-content;
+    padding: 0 1em;
   }
 
   &__title {
@@ -66,7 +67,7 @@
 
     @media (min-width: 320px) and (min-height: 650px) {
       display: block;
-      top: 150px;
+      top: 180px;
       left: 20px;
     }
 

@@ -22,6 +22,7 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
+    padding: 0 1em;
     width: 100%;
     @include m.desktop {
       width: 1000px;
@@ -55,10 +56,10 @@
   }
   & .swiper-container {
     width: 100%;
-    height: 350px;
-  }
-  .swiper-pagination-bullet {
-    opacity: 1;
+    height: 400px;
+    @media (min-width: 479px) {
+      height: 350px;
+    }
   }
   & .customer {
     width: 100%;
@@ -78,4 +79,9 @@
       font-weight: 500;
     }
   }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: c.$red-400 !important;
 }
