@@ -89,7 +89,7 @@
         </div>
       </section>
       <!-- servic -->
-      <section id="service" class="what-we-do">
+      <section class="what-we-do">
         <div class="what-we-do__container">
           <header class="what-we-do__header">
             <h1 class="what-we-do__title">What we do</h1>
@@ -279,7 +279,12 @@
                 alt=""
               />
               <div class="our-feature-work__overlay">
-                <a class="our-feature-work__link" href="#">View details</a>
+                <a
+                  class="our-feature-work__link"
+                  href=""
+                  onclick="return false;"
+                  >View details</a
+                >
               </div>
             </div>
             <div class="our-feature-work__item">
@@ -289,7 +294,12 @@
                 alt=""
               />
               <div class="our-feature-work__overlay">
-                <a class="our-feature-work__link" href="#">View details</a>
+                <a
+                  class="our-feature-work__link"
+                  href=""
+                  onclick="return false;"
+                  >View details</a
+                >
               </div>
             </div>
             <div class="our-feature-work__item">
@@ -299,13 +309,18 @@
                 alt=""
               />
               <div class="our-feature-work__overlay">
-                <a class="our-feature-work__link" href="#">View details</a>
+                <a
+                  class="our-feature-work__link"
+                  href=""
+                  onclick="return false;"
+                  >View details</a
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="our-best-service">
+      <section id="service" class="our-best-service">
         <div class="our-best-service__container">
           <header class="our-best-service__header">
             <h1>Our Best Service</h1>
@@ -358,7 +373,9 @@
             </p>
           </header>
           <div>
-            <a class="btn our-ideas__link" href="#">Keep exploring</a>
+            <a class="btn our-ideas__link" href="" onclick="return false;"
+              >Keep exploring</a
+            >
           </div>
         </div>
       </section>
@@ -482,7 +499,7 @@
         </div>
       </section>
       <!-- team -->
-      <section class="team">
+      <section id="team" class="team">
         <div class="team__container">
           <header class="team__header">
             <h1>Meet our crew</h1>
@@ -631,7 +648,7 @@
           </div>
         </div>
       </section>
-      <section class="blog">
+      <section id="blog" class="blog">
         <div class="blog__container">
           <header class="blog__header">
             <h1>Lattest blog</h1>
@@ -689,7 +706,9 @@
               <div class="card__x">X</div>
               <div class="card__x">X</div>
               <div class="card__x">X</div>
-              <a class="card__link btn" href="">Sign up</a>
+              <a class="card__link btn" href="" onclick="return false;"
+                >Sign up</a
+              >
             </div>
             <div class="card card--featured">
               <div class="card__title">Basic</div>
@@ -700,7 +719,9 @@
               <div class="card__x">X</div>
               <div class="card__x">X</div>
               <div class="card__x">X</div>
-              <a class="card__link btn" href="">Sign up</a>
+              <a class="card__link btn" href="" onclick="return false;"
+                >Sign up</a
+              >
             </div>
             <div class="card">
               <div class="card__title">Basic</div>
@@ -711,13 +732,15 @@
               <div class="card__x">X</div>
               <div class="card__x">X</div>
               <div class="card__x">X</div>
-              <a class="card__link btn" href="">Sign up</a>
+              <a class="card__link btn" href="" onclick="return false;"
+                >Sign up</a
+              >
             </div>
           </div>
         </div>
       </section>
       <!-- contact -->
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact__container">
           <header class="contact__header">
             <h1>Get in touch with us</h1>
@@ -727,21 +750,25 @@
             </p>
           </header>
           <div class="contact__wraper">
-            <form action="#" class="contact__form">
+            <form
+              class="contact__form"
+              action=""
+              onsubmit="alert('You submitted the form.');"
+            >
               <div class="inputs">
                 <input
-                  onkeyup="checkFormsValidity();"
                   class="name"
                   name="name"
                   type="text"
                   placeholder=" Your Name"
+                  required
                 />
                 <input
-                  onkeyup="checkFormsValidity();"
                   class="email"
                   name="email"
                   type="email"
                   placeholder=" Email Address"
+                  required
                 />
               </div>
               <textarea
@@ -750,6 +777,7 @@
                 placeholder=" Message"
                 cols="39"
                 rows="10"
+                required
               ></textarea>
               <input class="submit btn" type="submit" value="Submit now" />
             </form>
