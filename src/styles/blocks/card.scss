@@ -1,7 +1,7 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/vars.scss' as v;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/vars.scss' as vars;
 
 .cards {
   display: flex;
@@ -14,31 +14,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: v.$ds-soft;
+    box-shadow: vars.$ds-soft;
     padding: 2em;
     border-radius: 0.8em;
-
     &:hover {
-      background-color: c.$red-400;
+      background-color: colors.$red-400;
       & > .card__text > .card__title {
-        color: c.$gray-50;
+        color: colors.$gray-50;
       }
       & > .card__text > .card__paragraph {
-        color: c.$gray-50;
+        color: colors.$gray-50;
       }
       & > .card__image > div {
-        background-color: c.$gray-50;
+        background-color: colors.$gray-50;
       }
       & > .card__image > div > svg {
-        color: c.$red-400;
+        color: colors.$red-400;
       }
       transition: all 250ms ease-in-out;
     }
-
-    @include m.tablet {
+    @include media.tablet {
       flex-direction: row;
     }
-
     &__image {
       display: flex;
       flex-direction: column;
@@ -53,11 +50,11 @@
         justify-content: center;
         width: 6em;
         height: 6em;
-        background-color: c.$red-400;
+        background-color: colors.$red-400;
         border-radius: 100%;
         svg {
           font-size: 3em;
-          color: c.$gray-50;
+          color: colors.$gray-50;
         }
       }
     }
@@ -67,9 +64,9 @@
     }
     &__title {
       font-size: 1.2em;
-      color: c.$gray-400;
+      color: colors.$gray-400;
       &::after {
-        background: c.$gray-100;
+        background: colors.$gray-100;
       }
     }
   }

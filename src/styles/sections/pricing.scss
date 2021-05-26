@@ -1,19 +1,19 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
-@use '../utils/vars.scss' as v;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
+@use '../utils/vars.scss' as vars;
 @import "../sections/section.scss";
 
 .pricing {
   @extend .section;
-  background-color: c.$gray-50;
+  background-color: colors.$gray-50;
   &__container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    @include m.desktop {
+    @include media.desktop {
       width: 1200px;
     }
     padding: 0 30px;
@@ -26,7 +26,7 @@
     & h1::after {
       content: "";
       margin: 1em auto 2em auto;
-      background: c.$gray-400;
+      background: colors.$gray-400;
       display: block;
       width: 4em;
       height: 3px;
@@ -39,12 +39,12 @@
     justify-content: center;
     align-items: center;
     gap: 4em;
-    @include m.tv {
+    @include media.tv {
       flex-flow: row nowrap;
     }
   }
   & .card {
-    border: 1px solid c.$gray-200;
+    border: 1px solid colors.$gray-200;
     border-radius: 8px;
     text-align: center;
     display: flex;
@@ -52,17 +52,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    @include m.tablet {
+    @include media.tablet {
       width: 400px;
     }
     & > div {
       width: 100%;
-      color: c.$gray-400;
-      border-bottom: 1px solid c.$gray-200;
+      color: colors.$gray-400;
+      border-bottom: 1px solid colors.$gray-200;
       padding: 1em;
     }
     &__title {
-      font-size: t.$fs-h2;
+      font-size: typography.$fs-h2;
       font-weight: 600;
       line-height: 2em;
       text-transform: uppercase;
@@ -70,15 +70,15 @@
     &__link {
       margin: 2em;
       background: none;
-      color: c.$gray-400;
-      border: 1px solid c.$gray-200;
+      color: colors.$gray-400;
+      border: 1px solid colors.$gray-200;
       border-radius: 8px;
     }
     &--featured {
-      box-shadow: v.$ds-400;
+      box-shadow: vars.$ds-400;
       & .card__link {
-        background: c.$red-400;
-        color: c.$gray-0;
+        background: colors.$red-400;
+        color: colors.$gray-0;
       }
     }
   }

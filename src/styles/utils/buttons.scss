@@ -1,5 +1,5 @@
-@use './colors.scss' as c;
-@use '../utils/typography.scss' as t;
+@use './colors.scss' as colors;
+@use '../utils/typography.scss' as typography;
 
 .btn {
   display: block;
@@ -8,9 +8,9 @@
   padding: 0.8em 2em;
   border-radius: 4px;
 
-  font-family: t.$ff-title;
-  background: c.$red-400;
-  color: c.$gray-0;
+  font-family: typography.$ff-title;
+  background: colors.$red-400;
+  color: colors.$gray-0;
 
   text-decoration: none;
   cursor: pointer;

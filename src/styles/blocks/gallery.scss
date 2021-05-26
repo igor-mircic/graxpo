@@ -1,18 +1,18 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
 @import "../sections/section.scss";
 
 .gallery {
   @extend .section;
-  background-color: c.$gray-50;
+  background-color: colors.$gray-50;
   &__container {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    @include m.desktop {
+    @include media.desktop {
       width: 1200px;
     }
     padding: 0 30px;
@@ -23,7 +23,7 @@
     flex-direction: column;
     text-align: center;
     h1 {
-      font-size: t.$fs-h3;
+      font-size: typography.$fs-h3;
     }
     & h1::after {
       content: "";
@@ -43,7 +43,7 @@
     grid-auto-flow: dense;
   }
   &__item {
-    @include m.desktop {
+    @include media.desktop {
       &--tall {
         grid-row: span 2 / auto;
       }
@@ -62,31 +62,27 @@
     transition: filter 300ms ease-in-out;
   }
   &__overlay {
-    background-color: c.$red-400;
+    background-color: colors.$red-400;
     filter: opacity(0%);
-
     grid-area: 1 / 1 / 2 / 2;
     margin: 1em;
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: flex-start;
     padding: 3em;
-
     & h2 {
-      color: c.$gray-50;
-      font-size: t.$fs-h3;
-      font-family: t.$ff-title;
+      color: colors.$gray-50;
+      font-size: typography.$fs-h3;
+      font-family: typography.$ff-title;
       margin-bottom: 0.2em;
       letter-spacing: 0.2em;
     }
     & h3 {
       color: #f8d9d6;
-      font-size: t.$fs-body;
-      font-family: t.$ff-title;
+      font-size: typography.$fs-body;
+      font-family: typography.$ff-title;
       text-transform: uppercase;
-
       &::after {
         content: "";
         margin-top: 1em;

@@ -1,18 +1,18 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
 @import "../sections/section.scss";
 
 .portfolio {
   @extend .section;
-  background-color: c.$gray-50;
+  background-color: colors.$gray-50;
   &__container {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    @include m.desktop {
+    @include media.desktop {
       width: 1300px;
     }
     padding: 0 30px;
@@ -24,7 +24,7 @@
     & h1::after {
       content: "";
       margin: 1em auto 2em auto;
-      background: c.$gray-400;
+      background: colors.$gray-400;
       display: block;
       width: 4em;
       height: 3px;

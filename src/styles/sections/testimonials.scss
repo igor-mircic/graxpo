@@ -1,15 +1,14 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
 @import "../sections/section.scss";
 
 .testimonials {
   @extend .section;
   padding: 90px 0;
-
-  background-color: c.$gray-0;
+  background-color: colors.$gray-0;
   background: {
     image: url("./images/testimonialsBg.png");
     repeat: no-repeat;
@@ -24,7 +23,7 @@
     align-items: center;
     padding: 0 30px;
     width: 100%;
-    @include m.desktop {
+    @include media.desktop {
       width: 1000px;
     }
   }
@@ -36,20 +35,20 @@
     & h1 {
       display: block;
       margin: 1em auto;
-      color: c.$gray-0;
+      color: colors.$gray-0;
       &::after {
         content: "";
         margin: 1em auto;
-        background: c.$gray-0;
+        background: colors.$gray-0;
         display: block;
         width: 4em;
         height: 3px;
         border-radius: 1em;
-        background-color: c.$gray-0;
+        background-color: colors.$gray-0;
       }
     }
     & h2 {
-      color: c.$gray-0;
+      color: colors.$gray-0;
       letter-spacing: 8px;
       font-weight: 400;
     }
@@ -68,14 +67,14 @@
     align-items: center;
     gap: 2em;
     &__testimonial {
-      color: c.$gray-50;
+      color: colors.$gray-50;
       font-style: italic;
       text-align: center;
     }
     &__name {
-      color: c.$red-400;
+      color: colors.$red-400;
       text-transform: uppercase;
-      font-size: t.$fs-h2;
+      font-size: typography.$fs-h2;
       font-weight: 500;
     }
   }
@@ -83,11 +82,11 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
-  background-color: c.$red-400 !important;
+  background-color: colors.$red-400 !important;
 }
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active-next,
 .swiper-pagination-bullet-active-prev {
   opacity: 1 !important;
-  border: 1px solid c.$red-400 !important;
+  border: 1px solid colors.$red-400 !important;
 }

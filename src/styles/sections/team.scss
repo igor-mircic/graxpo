@@ -1,19 +1,19 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
 @import "../sections/section.scss";
 
 .team {
   @extend .section;
-  background-color: c.$gray-75;
+  background-color: colors.$gray-75;
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    @include m.desktop {
+    @include media.desktop {
       width: 1300px;
     }
     padding: 0 30px;
@@ -26,7 +26,7 @@
     & h1::after {
       content: "";
       margin: 1em auto 2em auto;
-      background: c.$gray-400;
+      background: colors.$gray-400;
       display: block;
       width: 4em;
       height: 3px;
@@ -38,8 +38,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
-    @include m.tv {
+    @include media.tv {
       gap: 2em;
       flex-direction: row;
     }
@@ -52,12 +51,12 @@
     width: 270px;
     h2 {
       padding-top: 1em;
-      font-size: t.$fs-h3;
-      color: c.$gray-800;
+      font-size: typography.$fs-h3;
+      color: colors.$gray-800;
     }
     h3 {
-      font-size: t.$fs-body;
-      color: c.$gray-400;
+      font-size: typography.$fs-body;
+      color: colors.$gray-400;
     }
   }
   &__item:hover > &__overlay {
@@ -75,9 +74,8 @@
     height: 160px;
     width: 240px;
     position: absolute;
-    background-color: c.$red-400;
+    background-color: colors.$red-400;
     filter: opacity(0%);
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -85,26 +83,25 @@
     padding: 1.4em;
     gap: 0.8em;
     & p {
-      color: c.$gray-0;
+      color: colors.$gray-0;
       line-height: 2em;
       font-size: 0.7em;
     }
   }
   &__link {
     text-decoration: none;
-    border: 1px solid c.$gray-50;
+    border: 1px solid colors.$gray-50;
     padding: 0.5em 1em;
     border-radius: 8px;
-    @include mix.link-color(
-      $link: c.$gray-0,
-      $hover: c.$gray-0,
-      $active: c.$gray-0
+    @include mixins.link-color(
+      $link: colors.$gray-0,
+      $hover: colors.$gray-0,
+      $active: colors.$gray-0
     );
   }
   &__social {
     display: flex;
-
-    color: c.$gray-0;
+    color: colors.$gray-0;
     gap: 1em;
     div {
       display: flex;
@@ -114,16 +111,16 @@
       width: 2em;
       height: 2em;
       background: none;
-      border: 1px solid c.$gray-0;
+      border: 1px solid colors.$gray-0;
       border-radius: 100%;
-      @include m.tablet {
+      @include media.tablet {
         width: 2em;
         height: 2em;
       }
       svg {
         font-size: 1em;
-        color: c.$gray-0;
-        @include m.tablet {
+        color: colors.$gray-0;
+        @include media.tablet {
           font-size: 0.8em;
         }
       }

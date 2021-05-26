@@ -8,7 +8,6 @@ import "swiper/swiper-bundle.css";
 const swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 20,
-  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,

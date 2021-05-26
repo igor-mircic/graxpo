@@ -1,14 +1,14 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/buttons.scss' as b;
-@use '../utils/mixins.scss' as mix;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/buttons.scss' as buttons;
+@use '../utils/mixins.scss' as mixins;
 @import "../sections/section.scss";
 
 .subscribe {
   @extend .section;
   padding-bottom: 90px;
-  background-color: c.$gray-0;
+  background-color: colors.$gray-0;
   background: {
     image: url("./images/subscribeBG.png");
     repeat: no-repeat;
@@ -22,7 +22,7 @@
     align-items: center;
     padding: 0 30px;
     gap: 4em;
-    @include m.desktop {
+    @include media.desktop {
       width: 1200px;
       flex-direction: row;
     }
@@ -34,27 +34,27 @@
     & h1 {
       display: block;
       margin: 1em auto;
-      color: c.$gray-0;
+      color: colors.$gray-0;
       &::after {
         content: "";
         margin: 1em auto;
-        background: c.$gray-0;
+        background: colors.$gray-0;
         display: block;
         width: 4em;
         height: 3px;
         border-radius: 1em;
-        background-color: c.$gray-0;
-        @include m.desktop {
+        background-color: colors.$gray-0;
+        @include media.desktop {
           margin: 1em 0;
         }
       }
-      @include m.desktop {
+      @include media.desktop {
         text-align: left;
         margin-left: 0;
       }
     }
     & p {
-      color: c.$gray-0;
+      color: colors.$gray-0;
       text-align: left;
     }
   }
@@ -63,23 +63,23 @@
   }
   &__email {
     background: none;
-    border: 2px solid c.$gray-0;
+    border: 2px solid colors.$gray-0;
     border-radius: 0;
     padding: 0.8em;
     width: 100%;
-    color: c.$gray-0;
-    @include m.desktop {
+    color: colors.$gray-0;
+    @include media.desktop {
       width: 500px;
     }
     &:focus {
       outline: 0;
     }
     &::placeholder {
-      color: c.$gray-100;
+      color: colors.$gray-100;
     }
   }
   &__submit {
-    border: 2px solid c.$gray-0;
+    border: 2px solid colors.$gray-0;
     border-left: none;
     border-radius: 0;
     background: none;

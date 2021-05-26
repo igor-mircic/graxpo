@@ -1,4 +1,4 @@
-@use '../utils/colors.scss' as c;
+@use '../utils/colors.scss' as colors;
 
 .header {
   position: sticky;
@@ -6,7 +6,7 @@
   top: 0px;
   z-index: 999;
   margin: 0;
-  background: c.$gray-100;
+  background: colors.$gray-100;
 
   display: flex;
   justify-content: center;

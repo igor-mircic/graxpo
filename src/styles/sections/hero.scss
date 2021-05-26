@@ -1,11 +1,11 @@
-@use '../utils/typography.scss' as t;
-@use '../utils/colors.scss' as c;
-@use '../utils/media.scss' as m;
-@use '../utils/vars.scss' as v;
+@use '../utils/typography.scss' as typography;
+@use '../utils/colors.scss' as colors;
+@use '../utils/media.scss' as media;
+@use '../utils/vars.scss' as vars;
 @import "../sections/section.scss";
 
 .hero {
-  background-color: c.$gray-100;
+  background-color: colors.$gray-100;
   text: {
     transform: uppercase;
     align: center;
@@ -16,165 +16,139 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
   &__container {
     position: relative;
     width: fit-content;
     padding: 0 30px;
   }
-
   &__title {
     font: {
-      size: t.$fs-title;
-      family: t.$ff-title;
+      size: typography.$fs-title;
+      family: typography.$ff-title;
     }
     font-weight: 400;
     letter-spacing: 0.15em;
-    color: c.$gray-800;
+    color: colors.$gray-800;
   }
-
   &__subtitle {
     font: {
-      size: t.$fs-body;
-      family: t.$ff-body;
+      size: typography.$fs-body;
+      family: typography.$ff-body;
     }
     letter-spacing: 0.35em;
     line-height: 2em;
-    color: c.$gray-400;
+    color: colors.$gray-400;
   }
-
   &__headphones {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-400);
-
+    filter: drop-shadow(vars.$ds-400);
     @media (min-width: 1000px) and (min-height: 800px) {
       display: block;
       bottom: 0;
       left: -250px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       bottom: -60px;
       left: -420px;
     }
   }
-
   &__glasses {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-200);
-
+    filter: drop-shadow(vars.$ds-200);
     @media (min-width: 320px) and (min-height: 650px) {
       display: block;
       top: 180px;
       left: 20px;
     }
-
     @media (min-width: 800px) and (min-height: 650px) {
       top: 150px;
       left: -140px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       top: 110px;
       left: -220px;
     }
   }
-
   &__pens {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-200);
-
+    filter: drop-shadow(vars.$ds-200);
     @media (min-width: 1000px) and (min-height: 800px) {
       display: block;
       bottom: -220px;
       left: -220px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       bottom: -220px;
       left: -370px;
     }
   }
-
   &__pen-1 {
     position: absolute;
-    filter: drop-shadow(v.$ds-400);
+    filter: drop-shadow(vars.$ds-400);
   }
-
   &__pen-2 {
     position: absolute;
-    filter: drop-shadow(v.$ds-200);
+    filter: drop-shadow(vars.$ds-200);
   }
-
   &__mouse {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-200);
-
+    filter: drop-shadow(vars.$ds-200);
     @media (min-width: 800px) and (min-height: 650px) {
       display: block;
       top: 200px;
       right: -80px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       top: 200px;
       right: -170px;
     }
   }
-
   &__pen-holder {
     position: absolute;
     display: none;
-    filter: drop-shadow(v.$ds-200);
-
+    filter: drop-shadow(vars.$ds-200);
     @media (min-width: 1000px) and (min-height: 800px) {
       display: block;
       top: 0;
       right: -250px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       top: 0;
       right: -350px;
     }
   }
-
   &__glass-cork {
     position: absolute;
     display: none;
-
     @media (min-width: 320px) and (min-height: 650px) {
       display: block;
       bottom: 200px;
       right: 20px;
     }
-
     @media (min-width: 800px) and (min-height: 650px) {
       bottom: 200px;
       right: -230px;
     }
-
     @media (min-width: 1300px) and (min-height: 800px) {
       bottom: 150px;
       right: -360px;
     }
   }
-
   &__glass {
     position: relative;
     right: 50px;
-    filter: drop-shadow(v.$ds-200);
+    filter: drop-shadow(vars.$ds-200);
   }
 
   &__cork {
     position: relative;
     left: 50px;
     top: 15px;
-    filter: drop-shadow(v.$ds-200);
+    filter: drop-shadow(vars.$ds-200);
   }
 }
 
@@ -186,12 +160,11 @@
   justify-self: flex-end;
   &__text {
     font: {
-      size: t.$fs-body;
-      family: t.$ff-body;
+      size: typography.$fs-body;
+      family: typography.$ff-body;
     }
-    color: c.$red-300;
+    color: colors.$red-300;
   }
-
   display: none;
   @media (min-height: 315px) {
     display: block;
