@@ -44,7 +44,7 @@
 
     font: {
       family: t.$ff-logo;
-      size: 2em;
+      size: 1.8em;
     }
 
     @include mix.link-color(
@@ -100,7 +100,7 @@
       $active: c.$red-400
     );
     @include m.desktop {
-      font-size: t.$fs-body;
+      font-size: 0.9em;
     }
   }
   &__toggle {

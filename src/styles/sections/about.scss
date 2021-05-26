@@ -33,6 +33,8 @@
   }
   &__link {
     @extend .btn;
+
+    font-size: t.$fs-body;
     align-self: flex-start;
     margin: 3em 0;
   }

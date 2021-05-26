@@ -25,13 +25,13 @@ h1 {
   font-family: $ff-title;
   font-size: $fs-h1;
   font-weight: 400;
-  color: c.$gray-800;
+  color: #333b46;
   text-transform: uppercase;
 
   &::after {
     content: "";
     margin: 1em 0 2em 0;
-    background: c.$gray-400;
+    background: #898989;
     display: block;
     width: 2em;
     height: 3px;
@@ -41,13 +41,15 @@ h1 {
 h2 {
   font-size: $fs-h2;
   font-family: $ff-body;
+  color: #333b46;
   text-transform: uppercase;
 }
 h3 {
   font-size: $fs-h3;
   font-family: $ff-body;
+  color: #333b46;
 }
 p {
   font-size: $fs-body;
-  color: c.$gray-400;
+  color: #81868e;
 }

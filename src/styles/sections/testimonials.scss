@@ -85,3 +85,9 @@
   opacity: 1 !important;
   background-color: c.$red-400 !important;
 }
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-prev {
+  opacity: 1 !important;
+  border: 1px solid c.$red-400 !important;
+}

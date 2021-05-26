@@ -23,7 +23,7 @@
     text-align: center;
     & h1::after {
       content: "";
-      margin: 1em auto;
+      margin: 1em auto 2em auto;
       background: c.$gray-400;
       display: block;
       width: 4em;
