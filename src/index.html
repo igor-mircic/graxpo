@@ -556,8 +556,7 @@
             </p>
           </header>
           <form
-            action="#subscribe"
-            onsubmit="alert('You are now subscribed.');"
+            onsubmit="alert('You are now subscribed.'); event.preventDefault();"
             class="subscribe__form"
           >
             <input
@@ -847,8 +846,7 @@
           <div class="contact__wraper">
             <form
               class="contact__form"
-              action="#contact"
-              onsubmit="alert('You submitted the form.');"
+              onsubmit="alert('You submitted the form.'); event.preventDefault();"
             >
               <div class="inputs">
                 <input
